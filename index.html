@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="contactUsForm" class="contact-form-bg-container pt-5 pb-5">
+        <div class="form-container">
+            <h1 class="heading">CONTACT US</h1>
+            <p class="para">Please fill in your information and we'll be right back in no time.</p>
+            <form class="my-form" id="myContactForm">
+                <div class="mb-3">
+                    <label for="title" class="label-name">Title<span class="mandatory">*</span></label>
+                    <select id="title" class="form-control">
+                        <option value="Mr">Mr</option>
+                        <option value="Mrs">Mrs</option>
+                        <option value="Ms">Ms</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="firstName" class="label-name">Firstname<span class="mandatory">*</span></label>
+                    <input type="text" class="form-control" id="firstName" />
+                    <p id="firstNameErrMsg" class="error-message"></p>
+                </div>
+                <div class="mb-3">
+                    <label for="lastName" class="label-name">Lastname<span class="mandatory">*</span></label>
+                    <input type="text" class="form-control" id="lastName" />
+                    <p id="lastNameErrMsg" class="error-message"></p>
+                </div>
+                <div class="mb-3">
+                    <label for="date" class="label-name">Date of birth</label>
+                    <input type="date" class="form-control" id="date" />
+                </div>
+                <div class="mb-3">
+                    <label for="number" class="label-name">Telephone number<span class="mandatory">*</span></label>
+                    <input type="text" class="form-control" id="number" />
+                    <p id="numberErrMsg" class="error-message"></p>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="label-name">Email address<span class="mandatory">*</span></label>
+                    <input type="text" class="form-control" id="email" />
+                    <p id="emailErrMsg" class="error-message"></p>
+                </div>
+                <div class="mb-3">
+                    <label for="description" class="label-name">Message</label>
+                    <br />
+                    <textarea rows="3" cols="" class="form-control" id="description"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="myFile" class="label-name">Upload file</label>
+                    <input type="file" id="myFile" name="myfile" accept="image/*,.pdf" class="form-control-file" multiple />
+                </div>
+                <button type="submit" class="button">Submit</button>
+            </form>
+        </div>
+    </div>
+    <div id="details" class="data-container data-show">
+        <h1 class="greet">Thank you <span id="greeting" class="span1"></span></h1>
+        <p class="description">You have submitted following details:</p>
+        <p class="detail">Date of birth: <span id="detail1" class="span-element"></span></p>
+        <p class="detail">Telephone: <span id="detail2" class="span-element"></span></p>
+        <p class="detail">Message: <span id="detail3" class="span-element"></span></p>
+        <p class="detail">File upload: <span id="detail4" class="span-element"></span></p>
+        <button id="backBtn" class="back-button mt-3">Back</button>
+    </div>
+</body>
+
+</html>
